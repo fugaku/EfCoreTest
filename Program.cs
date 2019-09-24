@@ -16,7 +16,7 @@ namespace EfCoreTest
                     dbContext.Database.EnsureCreated();
 
                     var AEntities = new Faker<AEntity>()
-                                    .RuleFor(c => c.Name, f => f.Random.String(10))
+                                    .RuleFor(c => c.Name, f => f.Random.String2(10))
                                     .Generate(10);
 
                     dbContext.AddRange(AEntities);
@@ -24,42 +24,42 @@ namespace EfCoreTest
 
                     dbContext.AddRange(new Faker<RootEntity>()
                                     .StrictMode(false)
-                                    .RuleFor(c => c.Name, f => f.Random.String(10))
+                                    .RuleFor(c => c.Name, f => f.Random.String2(10))
                                     .RuleFor(c => c.AEntityId, f => f.PickRandom(AEntities).Id)
                                     .RuleFor(c => c.AAEntityId, f => f.PickRandom(AEntities).Id)
                                     .RuleFor(c => c.AAAEntityId, f => f.PickRandom(AEntities).Id)
                                     .RuleFor(c => c.AAAAEntityId, f => f.PickRandom(AEntities).Id)
                                     .RuleFor(c => c.AAAAAEntityId, f => f.PickRandom(AEntities).Id)
-                                    .RuleFor(c => c.Text1, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text2, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text3, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text4, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text5, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text6, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text7, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text8, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text9, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text10, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text11, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text12, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text13, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text14, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text15, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text16, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text17, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text18, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text19, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text20, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text21, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text22, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text23, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text24, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text25, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text26, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text27, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text28, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text29, f => f.Random.String(10))
-                                    .RuleFor(c => c.Text30, f => f.Random.String(10))
+                                    .RuleFor(c => c.Text1, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text2, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text3, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text4, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text5, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text6, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text7, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text8, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text9, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text10, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text11, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text12, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text13, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text14, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text15, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text16, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text17, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text18, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text19, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text20, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text21, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text22, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text23, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text24, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text25, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text26, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text27, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text28, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text29, f => f.Random.String2(10))
+                                    .RuleFor(c => c.Text30, f => f.Random.String2(10))
                                     .Generate(10));
                     dbContext.SaveChanges();
 
@@ -354,6 +354,7 @@ namespace EfCoreTest
                                  }).FirstOrDefault();
 
                     Console.WriteLine("Finished, test query left join");
+                    Console.WriteLine(data2.Text1);
                     Console.WriteLine(JsonConvert.SerializeObject(data2, Formatting.Indented));
                 }
             }
